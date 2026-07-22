@@ -1,0 +1,68 @@
+{
+  "profiles": [
+    {
+      "name": "Lab HA Broker",
+      "host": "10.20.25.40",
+      "port": 1883,
+      "client_id": "RamMQTT",
+      "username": "",
+      "password": "",
+      "preset_subscriptions": [
+        "smartbed/sensor/#",
+        "funhouse/#",
+        "degenstation/#",
+        "tailgate/stream/#"
+      ]
+    }
+  ],
+  "device_mappings": [
+    {
+      "topic": "smartbed/sensor/temperature",
+      "device_id": "degenstation",
+      "device_label": "FunHouse (DegenStation)",
+      "sensor_key": "temperature",
+      "sensor_label": "Temperature",
+      "unit": "°F"
+    },
+    {
+      "topic": "smartbed/sensor/humidity",
+      "device_id": "degenstation",
+      "device_label": "FunHouse (DegenStation)",
+      "sensor_key": "humidity",
+      "sensor_label": "Humidity",
+      "unit": "%"
+    },
+    {
+      "topic": "smartbed/sensor/light",
+      "device_id": "degenstation",
+      "device_label": "FunHouse (DegenStation)",
+      "sensor_key": "light",
+      "sensor_label": "Light Level",
+      "unit": ""
+    },
+    {
+      "topic": "smartbed/sensor/dark",
+      "device_id": "degenstation",
+      "device_label": "FunHouse (DegenStation)",
+      "sensor_key": "dark",
+      "sensor_label": "Dark Detected",
+      "unit": ""
+    },
+    {
+      "topic": "smartbed/sensor/rain",
+      "device_id": "rain_sensor",
+      "device_label": "Rain ESP32",
+      "sensor_key": "rain",
+      "sensor_label": "Raining",
+      "unit": ""
+    },
+    {
+      "topic": "smartbed/sensor/rain_level",
+      "device_id": "rain_sensor",
+      "device_label": "Rain ESP32",
+      "sensor_key": "rain_level",
+      "sensor_label": "Rain Level",
+      "unit": ""
+    }
+  ]
+}

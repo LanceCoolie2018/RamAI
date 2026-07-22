@@ -1,0 +1,94 @@
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vs/
+.vscode/
+*.swp
+*~
+
+# --- Secrets / local credentials ---
+**/local_profile.json
+**/secrets.h
+**/credentials.h
+**/mqtt_local.json
+**/.env
+**/.env.*
+!**/.env.example
+!**/secrets.example.h
+!**/credentials.example.h
+!**/mqtt_local.example.json
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+.env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# --- Node (if any) ---
+node_modules/
+
+# --- CMake / C++ / Qt (MQTTcustomPlugin) ---
+**/build/
+**/cmake-build-*/
+CMakeUserPresets.json
+CMakeCache.txt
+CMakeFiles/
+*.user
+*.suo
+*.VC.db
+
+# Toolchains / deps (reinstall via README)
+**/vcpkg/
+**/.qtvenv/
+**/Qt/
+
+# Staged runtime binaries & Qt plugin folders (produced by build)
+**/RamMQTT.exe
+**/RamMQTTProbe.exe
+**/*.dll
+**/platforms/
+**/styles/
+**/imageformats/
+**/iconengines/
+**/generic/
+**/networkinformation/
+**/tls/
+
+# --- Unreal Engine ---
+**/Binaries/
+**/DerivedDataCache/
+**/Intermediate/
+**/Saved/
+**/Build/
+**/*.VC.db
+**/*.opensdf
+**/*.sdf
+**/*.sln.docstates
+**/.vs/
+**/FileOpenOrder/
+**/*.xcodeproj
+**/*.xcworkspace
+
+# Keep Unreal source / content / project files
+!**/*.uproject
+!**/*.Build.cs
+!**/*.Target.cs
+
+# --- Local media / capture dumps (keep out of repo) ---
+BeerAutomations/screenshots/
+BeerAutomations/Vision/real_debug/
+*.mp4
+*.mov
+*.avi
+
+# --- Archives / logs ---
+*.log
+*.tmp
+*.bak

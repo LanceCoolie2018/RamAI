@@ -1,0 +1,28 @@
+# Build output
+build/
+.vs/
+.vscode/
+CMakeUserPresets.json
+cmake-build-*/
+
+# Toolchains / deps (reproducible via README)
+vcpkg/
+.qtvenv/
+Qt/
+
+# Local credentials
+config/local_profile.json
+
+# Staged runtime at project root (produced by build)
+/RamMQTT.exe
+/RamMQTTProbe.exe
+/*.dll
+/opengl32sw.dll
+/D3Dcompiler_47.dll
+/platforms/
+/styles/
+/imageformats/
+/iconengines/
+/generic/
+/networkinformation/
+/tls/

@@ -1,0 +1,23 @@
+# Home Assistant Lovelace snippets — paste into your dashboard on the Pi.
+# Prototype: buttons publish to MQTT; RamBedAI stadium screen loads the URL.
+# No preview panel required for this prototype.
+
+# --- helpers (configuration.yaml or UI) ---
+# input_text is optional for later preview work.
+
+# --- NBA channel button ---
+type: button
+name: NBA Channel
+icon: mdi:basketball
+tap_action:
+  action: call-service
+  service: mqtt.publish
+  service_data:
+    topic: tailgate/stream/active
+    payload: >-
+      {"id":"nba","name":"NBA Channel","url":"https://tubitv.com/live/400000116/the-nba-channel"}
+    retain: true
+    qos: 1
+
+# --- test from RamMQTTProbe (no HA) ---
+# mosquitto_pub -h 10.20.25.40 -u USER -P PASS -t tailgate/stream/active -r -m '{"id":"nba","name":"NBA Channel","url":"https://tubitv.com/live/400000116/the-nba-channel"}'
